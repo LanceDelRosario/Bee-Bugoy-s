@@ -1,345 +1,217 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
-}
-html{
-  scroll-behavior: smooth;
-}
-.title{
-  font-weight: bold;
-  margin: 20px;
-}
-.number{
-  color: #000;
-}
-.number :hover{
-  color: #FEBE00;
-}
-body{
-    background-image: url("images/HomeBG.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-  }
-  .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
-    z-index: 9999;
-  }
-  
-  .popup:target {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease, visibility 0s linear;
-  }
-  
-  .popup-content {
-    background-color: #fff;
-    justify-content: space-between;
-    border-radius: 5px; 
-    display: flex;
-  }
-  
-  .close {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .close:hover {
-    color: #f00;
-  }
-.logo{
-    height: 4vw;
-    width: 4vw;
-    text-align: left;
-  }
-::selection{
-  color: #000;
-  background: #fff;
-}
-
-.hours{
-  flex:1;
-  padding:20px;
-}
-.hours ul li{
-  list-style-type: none;
-  text-decoration: none;
-  color: #000;
-  text-align: right;
-}
-.day{
-  flex:1;
-  padding:20px;
-}
-.day ul li{
-  list-style-type: none;
-  text-decoration: none;
-  color: #000;
-  text-align: left;
-}
-nav{
-  position: fixed;
-  background: #FEBE00;
-  width: 100%;
-  padding: 0px 10px;
-  z-index: 12;
-
-}
-nav .menu{
-  max-width: 1250px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-.menu .title a{
-  text-decoration: none;
-  color: #fff;
-  font-size: 2vw;
-  font-weight: 600;
-}
-.menu .navtabs{
-  display: inline-flex;
-}
-.menu .navtabs li{
-  list-style: none;
-  margin-left: 7px;
-}
-.menu .navtabs li:first-child{
-  margin-left: 0px;
-}
-.menu .navtabs li a{
-  text-decoration: none;
-  color: #fff;
-  font-size: 1vw;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5vw;
-  transition: all 0.3s ease;
-}
-.menu .navtabs li a:hover{
-  background-color: #1b1b1b;
-  color: #fff;
-}
-.menu .navtabs li a.active{
-  background-color: #1b1b1b;
-  color:#fff;
-}
-
-footer{
-  flex-shrink: 0;
-  background-color: #1b1b1b;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  
-}
-.footercontainer{
-  width: 100%;
-  padding: 70px 30px 20px;
-  text-decoration: none;
-}
-.socials{
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="icon" href="/images/BeeLogo1.png">
+    <link rel="stylesheet" href="rawmeat.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     
-}
-.socials a{
-  text-decoration: none;
-  padding:10px;
-  margin: 10px;
-  background-color: #fff;
-  text-decoration: none;
-  border: 1px solid #fff;
-
-}
-.socials a i{
-  font-size: 2em;
-  color: #000;
-  opacity: 0.9;
-  text-decoration: none;
-}
-.socials a:hover{
-  text-decoration: none;
-  padding:10px;
-  margin: 10px;
-  background-color: transparent;
- 
-  transition: 0.3s ease;
-  text-decoration: none;
-}
-.socials a i:hover{
-  color: #FEBE00;
-  transition: 0.3s ease;
-  text-decoration: none;
-}
-
-.footernav{
-  margin: 30px 0;
-  text-decoration: none;
-}
-
-.footernav ul{
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  list-style-type: none
-}
-
-.footernav ul li a{
-  color: #FEBE00;
-  margin: 20px;
-  text-decoration: none;
-  font-size: 1.3em;
-  opacity: 0.7;
-  transition: 0.5s;
-}
-.footernav ul li a:hover{
-  opacity:1;
-}
-.bottom{
-  padding: 20px;
-  
-  text-align: center;
-}
-.bottom p{
-  color: #fff;
-}
-.designer{
-  opacity: 0.5;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  margin: 0px 5px;
-}
-@media (max-width: 800px) {
-  .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .toggle-button {
-      display: flex;
-  }
-
-  .navtabs {
-      display: none;
-      width: 100%;
-      
-  }
-
-  .navtabs ul {
-      width: 100%;
-      flex-direction: column;
-  }
-
-  .navtabs ul li {
-      text-align: center;
-  }
-
-  .navtabs ul li a {
-      padding: .5rem 1rem;
-  }
-
-  .navtabs.active {
-      display: flex;
-  }
-  .logo{
-      display: none;
-  }
-  .footernav ul{
-    flex-direction: column;
-  }
-  .footernav ul li{
-    width: 100%;
-    text-align: center;
-    margin: 10px;
-  }
-  
-}
-section{
-  height: 100%;
-  width: 100%;
-}
-.prods{
     
-    background-color: none;
-    width: 20vw;
-    height: 30vw;
-    border: 2px solid #FEBE00;
-    padding: 30px;
-    margin: 30px;
-    border-radius: 3vw;
-    text-align: center;
-    display: inline-block;
-    
-}
-.prodimg{
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width:70%;
-    height:60%;
-    border-radius: 2vw;
-    justify-content: center;
-    position: inherit;
-}
-.prodbuttons{
-height: 3vw;
-width: 11vw;
-border-radius: 50vw;
-border: none;
-margin-top: 2vw;
-margin: 10px;
-border: 0.05vw solid white;
-font-size: 1vw;
-font-weight: 500;
-padding: 0 10px;
-cursor: pointer;
-outline: none;
-transition: all 0.3s ease;
-margin-left: auto;
-margin-right: auto;
 
-}
-.prods button{
-    background: #fff;
-    color: black;
-}
-.prods button:hover{
-    background: none;
-    color:#FEBE00;
-    border-color: #FEBE00;
-}
-label{
-    
-    text-align: center;
-    color:#fff ;
-    font-size: 2vw;
-}
-h2{
-    margin-top: 1vw;
-    text-align: center;
-    color: #FEBE00;
-}
-select{
-  padding:0.05em;
-}
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="menu">
+            <a href="Homepage.html"><img src="images/BeeLogo.png" class="logo"></a>
+            <div class="title">
+                <a href="Homepage.html">Bee Bugoy's Frozen Meat Shop</a>
+            </div>
+
+            <ul class="navtabs">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="rawmeat.html" class="active">Shop</a></li>
+                <li><a>Cart</a></li>
+                <li><a href="#footer">About Us</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <ul>
+            <div class="btns">
+                <button class="prodraw"><a href="rawmeat.html">Raw Goods</a></button>
+                <button class="prodmanuf"><a href="manuf.html">Manufactured Goods</a></button>
+            </div>
+
+
+            <div class="prods">
+                <img src="images/ADOBO CUT.jpg" class="prodimg">
+                <h2>Adobo Cut</h2>
+                <label class="selector">Kilo:</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                <button class="prodbuttons">Add to Cart</button>
+            </div>
+            <div class="prods">
+                <img src="images/BELLY LIEMPO.jpg" class="prodimg">
+                <h2>Belly Liempo</h2>
+                <label>Kilo:</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                <button class="prodbuttons">Add to Cart</button>
+            </div>
+            <div class="prods">
+                <img src="images/BONELESS BEEF SHANK.jpg" class="prodimg">
+                <h2>Beef Shank</h2>
+                <label>Kilo:</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                <button class="prodbuttons">Add to Cart</button>
+            </div>
+            <div class="prods">
+                <img src="images/JOWLS.jpg" class="prodimg">
+                <h2>Jowls</h2>
+                <label>Kilo:</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                <button class="prodbuttons">Add to Cart</button>
+            </div>
+            <div class="prods">
+                <img src="images/KASIM.jpg" class="prodimg">
+                <h2>Kasim</h2>
+                <label>Kilo:</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                <button class="prodbuttons">Add to Cart</button>
+            </div>
+            <div class="prods">
+                <img src="images/PATA SLICE.jpg" class="prodimg">
+                <h2>Pata Slice</h2>
+                <label>Kilo:</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                <button class="prodbuttons">Add to Cart</button>
+            </div>
+            <div class="prods">
+                <img src="images/PORK ATAY.jpg" class="prodimg">
+                <h2>Pork Atay</h2>
+                <label>Kilo:</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                <button class="prodbuttons">Add to Cart</button>
+            </div>
+            <div class="prods">
+                <img src="images/PORK GINILING.jpg" class="prodimg">
+                <h2>Pork Giniling</h2>
+                <label>Kilo:</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                <button class="prodbuttons">Add to Cart</button>
+            </div>
+            <div class="prods">
+                <img src="images/RIBLETS.jpg" class="prodimg">
+                <h2>Riblets</h2>
+                <label>Kilo:</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                <button class="prodbuttons">Add to Cart</button>
+            </div>
+    </div>
+    </ul>
+
+    <footer id="footer">
+        <div class="footernav">
+          <ul>
+              <li><a href="#business">Business Hours</a></li>
+              <li><a href="#contacts">Contacts</a></li>
+          </ul>
+      </div>
+      <div id="business" class="popup">
+          <div class="popup-content">
+              <div class="day">
+              <h2>Hours</h2>
+              <ul >
+                  <li>Monday</li>
+                  <li>Tuesday</li>
+                  <li>Wednesday</li>
+                  <li>Thursday</li>
+                  <li>Friday</li>
+                  <li>Saturday</li>
+                  <li>Sunday</li>
+              </ul>
+              </div>
+              <div class="hours">
+              <ul >
+                  <li>5:00 AM - 9:00 PM</li>
+                  <li>5:00 AM - 9:00 PM</li>
+                  <li>6:00 AM - 8:00 PM</li>
+                  <li>5:00 AM - 9:00 PM</li>
+                  <li>5:00 AM - 9:00 PM</li>
+                  <li>5:00 AM - 9:00 PM</li>
+                  <li>6:00 AM - 8:00 PM</li>
+              </ul>
+              </div>
+              <a href="#" class="close">Close</a>
+          </div>
+      </div>
+      <div id="contacts" class="popup">
+        <div class="popup-content">
+          <div class="footercontainer">
+            <div class="socials">
+              <a href="https://www.facebook.com/BeeBugoyMeatandGreet/menu/?id=100069943957940&sk=menu"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.facebook.com/BeeBugoyMeatandGreet/menu/?id=100069943957940&sk=menu"><i
+                  class="fa-brands fa-google-plus"></i></a>
+            </div>
+            <a href=# class="number">0995 452 1552</a>
+           
+            <a href="#" class="close">Close</a>
+        </div>
+    </div>
+  </div>
+      <div class="bottom">
+        <p>Copyright &copy;2023; <span class="designer">Designed by Sayo Lang Sapat Na</span></p>
+      </div>
+    </footer>
+
+
+
+</body>
+
+</html>
