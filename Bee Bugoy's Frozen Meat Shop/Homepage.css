@@ -7,6 +7,19 @@
   box-sizing: border-box;
   font-family: 'Poppins',sans-serif;
 }
+html{
+  scroll-behavior: smooth;
+}
+.title{
+  font-weight: bold;
+  margin: 20px;
+}
+.number{
+  color: #000;
+}
+.number :hover{
+  color: #FEBE00;
+}
 body{
     background-image: url("images/HomeBG.jpg");
     background-repeat: no-repeat;
@@ -14,7 +27,44 @@ body{
     background-size: cover;
     width: 100%;
   }
- 
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    z-index: 9999;
+  }
+  
+  .popup:target {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s linear;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    justify-content: space-between;
+    border-radius: 5px; 
+    display: flex;
+  }
+  
+  .close {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .close:hover {
+    color: #f00;
+  }
 .logo{
     height: 4vw;
     width: 4vw;
@@ -23,6 +73,27 @@ body{
 ::selection{
   color: #000;
   background: #fff;
+}
+
+.hours{
+  flex:1;
+  padding:20px;
+}
+.hours ul li{
+  list-style-type: none;
+  text-decoration: none;
+  color: #000;
+  text-align: right;
+}
+.day{
+  flex:1;
+  padding:20px;
+}
+.day ul li{
+  list-style-type: none;
+  text-decoration: none;
+  color: #000;
+  text-align: left;
 }
 nav{
   position: fixed;
@@ -75,9 +146,11 @@ nav .menu{
 }
 
 footer{
-  width: 100%;
+  flex-shrink: 0;
   background-color: #1b1b1b;
-  text-decoration: none;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
   
 }
 .footercontainer{
@@ -96,7 +169,6 @@ footer{
   padding:10px;
   margin: 10px;
   background-color: #fff;
-  border-radius: 50%;
   text-decoration: none;
   border: 1px solid #fff;
 
@@ -112,11 +184,9 @@ footer{
   padding:10px;
   margin: 10px;
   background-color: transparent;
-  border: 1px solid #FEBE00;
-  border-radius: 50%;
+ 
   transition: 0.3s ease;
   text-decoration: none;
-
 }
 .socials a i:hover{
   color: #FEBE00;
@@ -207,15 +277,21 @@ footer{
   }
   
 }
+section{
+  height: 100%;
+  width: 100%;
+}
 
 .center{
-  position: absolute;
-  top: 52%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  height: 100%;
   width: 100%;
-  padding: 0 20px;
-  text-align: center;
+  
 }
 .center .title{
   color: #FEBE00;
@@ -223,8 +299,7 @@ footer{
   font-weight: 600;
 }
 .center .sub_title{
-  color: #FEBE00
-  ;
+  color: #FEBE00;
   font-size: 52px;
   font-weight: 600;
 }
